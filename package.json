@@ -10,7 +10,7 @@
   },
   "author": "yussan",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.18.11",
     "gulp": "^3.9.1",
     "gulp-minify": "^1.0.0",
