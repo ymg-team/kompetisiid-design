@@ -1,0 +1,40 @@
+extends layouts/login
+
+block title 
+  title Masuk ke KI
+
+block content
+    .login-box
+        .login-box__title
+          h1(style="text-align:center;line-height:1") Masuk ke KI  
+            br
+            small(style="font-weight:normal") Mari ramaikan semangat kompetisi di Indonesia.
+        .login-box__content
+            form.form-ki.form-ki__white(action="#" method="post")
+                .form-child
+                    label(for='input-title') Email / username
+                    input(type='text' id='input-username' autofocus)
+                .form-child
+                    button.btn.btn-borderwhite(type='submit' style='width:100%;background-color:#FFF;color:#292929') 
+                        strong Login
+            
+            p Atau masuk menggunakan
+            .login-box__content__auth
+                a(href="#")
+                    img(src="img/facebook-icon.png")
+                a(href="#")
+                    img(src="img/google-icon.png")
+                //- a(href="#")
+                //-     img(src="img/twitter-icon.png")
+
+            hr 
+
+            p Belum punya akun, silahkan 
+              a(href="#") Regiser Disini
+        .login-box__footer
+            small 
+                a(href="#") bantuan
+            small 
+                a(href="#") privacy
+            small 
+                a(href="#") about

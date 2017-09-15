@@ -1,0 +1,65 @@
+extends layouts/dashboard 
+
+block title 
+    title kompetisi indonesia
+
+block content
+    .col-md-10
+        
+        h1 Kompetisi Terpasang
+        p.text-muted berikut adalah kompetisi yang telah anda pasang di Kompetisi Indonesia.
+        
+        .container-competition-tab(style="margin:20px 0 20px")
+            ul.horizontal-menu 
+                li.active
+                    a Terpublikasi&nbsp;
+                        span.label.label-gray 12
+                li
+                    a Moderasi&nbsp;
+                        span.label.label-gray 12
+
+        .p-b-50
+            .competition-items
+                - for(var i = 0; i < 4; i++) {
+                    .item 
+                        .item__left
+                            h4
+                                a(href='') Judul kompetisi yang lumayan agak panjang...
+                            p.text-muted(style="margin:0")
+                                | dipost 23 Jan 2017 oleh&nbsp;
+                                a(href="#") yussan
+                                | , di
+                                a(href="#") desain 
+                                | -
+                                a(href="#") desain blog
+                            span
+                                span.label.label-blue garansi 
+                                span.label.label-green support 
+                                span.label.label-green media partner
+                        .item__right
+                            .item__right-item
+                                h4.text-muted(title='total text')
+                                    i.fa.fa-file-text-o 56&nbsp;
+                            .item__right-item
+                                h4.text-muted(title='total views')
+                                    i.fa.fa-eye 26&nbsp;
+                            .item__right-item
+                                .dropdown
+                                    a.btn.btn-sm.dropdown-button.text-muted(title='options' href="javascript:;" data-target="menu-"+i)
+                                        i.fa.fa-ellipsis-v
+                                    .dropdown-items(id="menu-"+i)
+                                        ul
+                                            li
+                                                a(href="#") Preview
+                                            li
+                                                a(href="#") Ubah
+                                            hr
+                                            li
+                                                a(href="#") Hapus
+                - }
+            a.btn.btn-white
+                i.fa.fa-angle-left &nbsp;
+                | sebelumnya 
+            a.btn.btn-white
+                | berikutnya&nbsp;    
+                i.fa.fa-angle-right

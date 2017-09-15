@@ -1,0 +1,29 @@
+extends layouts/default-login 
+
+block title 
+    title pasang komplit - hadiah
+
+block content
+    .col-lg-5.col-md-6.col-sm-12
+        h1 Pasang Kompetisi
+        p.text-muted Pasang kompetisimu disini, isi dengan selengkap mungkin untuk mencegah kebingungan para peserta.
+
+        hr
+
+        .p-b-50
+
+            h3 Hadiah Kompetisi (2/3)
+            form.form-ki
+                .dashboard-box
+                    .form-child.error
+                        label(for='input-judul') Nilai total hadiah
+                        input#input-judul(type='number')
+                        small masukan angka dalam rupiah tanpa tanda baca, contoh : 5000000
+                    .form-child
+                        label(for='input-title') Deskripsi hadiah
+                        textarea#input-title
+                        small sampaikan deskripsi sejelas-jelasnya
+                    .form-child
+                        a.col-md-12.btn.btn-green(href='dashboard-pasang-komplit-2.html') 
+                            | Berikutnya (Kontak)
+                            span.fa.fa-arrow-right(style="float:right")

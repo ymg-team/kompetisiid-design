@@ -1,0 +1,35 @@
+extends layouts/default 
+
+block title 
+    title Kompetisi Kategori - Kompetisi Indonesia 
+
+block content
+    .col-md-12.filter-jelajah
+        .container
+            .row.no-margin
+            h1 Kategori
+            p.text-muted Ikuti kompetisi-kompetisi berdasarkan kategori dan minat kamu
+    .col-md-12
+        .m-30
+    .col-md-12
+        .container
+            .categories
+                h2 Blog
+                .categories-child
+                    a(href="#") SEO
+                        i.fa.fa-angle-right
+                    a(href="#") Blog Writing
+                        i.fa.fa-angle-right
+                    a(href="#") Semua Blog
+                        i.fa.fa-angle-right
+            .categories
+                h2 Desain
+                .categories-child
+                    a(href="#") Desain Blog
+                        i.fa.fa-angle-right
+                    a(href="#") Desain Logo
+                        i.fa.fa-angle-right
+                    a(href="#") Semua Desain
+                        i.fa.fa-angle-right
+    .col-md-12
+        .m-30

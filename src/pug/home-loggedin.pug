@@ -1,0 +1,109 @@
+extends layouts/default 
+
+block title 
+    title kompetisi indonesia
+
+block content
+    //- slider
+    include partials/sliders/home
+
+    //- featured competition
+    .col-md-12(style="border-bottom: 1px solid #969696")
+        .container
+            .row.subtitle-more
+                h2.menu-title Kompetisi Utama
+                a.btn.btn-white.btn-sm
+                    | Lihat semua
+            .row
+                .col-md-5
+                    .main-competition--left
+                        a(href="#")
+                            img(src="./img/poster/poster-1.jpg")
+                .col-md-5
+                    article.main-competition--right
+                        a(href="#")
+                            h3.title poster design competition
+                        small
+                            | oleh &nbsp;
+                            a(href="#") mellisa
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ullamcorper quam. Curabitur dictum euismod pellentesque. Proin egestas malesuada interdum. Fusce accumsan nulla vehicula libero eleifend lacinia. Duis arcu lorem, sagittis non risus sit amet, ultricies sagittis nunc.                    
+                        br 
+                        .categories 
+                            a.text-muted(href="#") 
+                                strong desain
+                            | ,&nbsp;
+                            a.text-muted(href="#") 
+                                strong desain poster
+                        progress(value="58" max="100")
+
+                        .meta
+                            .text-1
+                                .count Rp567juta
+                                .text-muted total hadiah
+                            .text-2
+                                .count 12 hari
+                                .text-muted deadline
+                            .text-2
+                                .count 45K
+                                .text-muted kunjungan
+
+                .col-md-2
+                    .home-categories-list
+                        ul 
+                            li.active 
+                                a(href="/jelajah-by-category.html") blog
+                            li 
+                                a(href="/jelajah-by-category.html") karya tulis
+                            li 
+                                a(href="/jelajah-by-category.html") desain
+                            li 
+                                a(href="/jelajah-by-category.html") developer
+                            li 
+                                a(href="/jelajah-by-category.html") fotografi
+                            li 
+                                a(href="/jelajah-by-category.html") menyanyi
+                            li 
+                                a(href="/jelajah-by-category.html") olahraga
+                            li 
+                                a(href="/categories.html") semua kategori
+
+    //- popular competitions
+    .col-md-12
+        .container
+            .row.subtitle-more
+                h2.menu-title Kompetisi Populer
+                a.btn.btn-white.btn-sm
+                    | Jelajah kompetisi
+            .row
+                - for(var i = 0; i < 4; i++) {
+                include ./partials/cards/competition-small
+                - }
+
+    //- newest competitions 
+    .col-md-12
+        .container
+            .row.subtitle-more
+                h2.menu-title Kompetisi Terbaru
+                a.btn.btn-white.btn-sm
+                    | Jelajah kompetisi
+            .row
+                - for(var i = 0; i < 6; i++) {
+                include ./partials/cards/competition
+                - }
+
+    .col-md-12
+        .col-md-8.col-md-push-2.col-lg-6.col-lg-push-3
+            .row
+                .media-partner
+                    h2.big-text Media Partner KI
+                    span KI juga ikut berperang sebagai media partner berbagai kompetisi di Indonesia.   
+                        
+            .row 
+                - for(var i = 0; i < 5; i++) {
+                include ./partials/cards/competition-mediapartner
+                - }
+
+    .col-md-12
+        .col-md-8.col-md-push-2.col-lg-6.col-lg-push-3
+            a.btn.btn-black.btn-fullwidth(style="margin-bottom:40px" href="#") 
+                strong selengkapnya

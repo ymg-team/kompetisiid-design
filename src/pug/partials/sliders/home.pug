@@ -1,0 +1,83 @@
+.col-md-12.slider
+    .slider-buttons
+        a#btn-slider--prev.btn-nav.btn-nav--left(href="javascript:;")
+            i.fa.fa-angle-left
+        a#btn-slider--next.btn-nav.btn-nav--right(href="javascript:;")
+            i.fa.fa-angle-right
+    .slider-container
+        .slider--item(style="background-image:url('./img/slider/slider-1.png');visibility:visible;opacity:1")
+            .slider--item--text
+                h2 this is title
+                p just extra text to make it more bigger and show clear data to audience, let's audience choose is this good or not.
+        .slider--item(style="background-image:url('./img/slider/slider-2.png');margin-top:-700px" )
+            .slider--item--text
+                h2 Ikuti kompetisi disini
+                p Temukan dan ikuti beragam kompetisi dari berbagai kategori di Indonesia sesuai dengan minat kamu, dan berjuanglah untuk menjadi pemenang dan mendapatkan hadiahnya.
+
+script.
+    (function(){
+        let currentIndex = 0
+        const SliderItemEl = document.getElementsByClassName('slider--item')
+        const BtnPrevEl = document.getElementById('btn-slider--prev')
+        const BtnNextEl = document.getElementById('btn-slider--next')
+        const totalIndex = SliderItemEl.length
+
+        // event listener
+        BtnPrevEl.addEventListener('click', prev)
+        BtnNextEl.addEventListener('click', cycle)
+
+        //interval 
+        let autoSlide = setInterval(cycle, 10000)
+
+        function cycle()
+        {
+            clearInterval(autoSlide)
+            autoSlide = setInterval(cycle, 10000)
+            if(currentIndex == 0)
+            {
+                currentIndex++
+            }
+            else if(currentIndex == totalIndex - 1) 
+            {
+                currentIndex = 0
+            }
+            else 
+            {
+                currentIndex++
+            }
+
+            return toggle()
+        }
+
+        function prev()
+        {
+            clearInterval(autoSlide)
+            autoSlide = setInterval(cycle, 10000)
+            if(currentIndex == 0)
+            {
+                currentIndex = totalIndex - 1
+            }
+            else if(currentIndex == totalIndex - 1) 
+            {
+                currentIndex = totalIndex - 2
+            }
+            else 
+            {
+                currentIndex--
+            }
+
+            return toggle()
+        }
+
+        function toggle()
+        {
+            Object.keys(SliderItemEl).map((n, key) => {
+                let visibility = 'hidden'
+                let opacity = 0
+                if(key == currentIndex) visibility = 'visible'
+                if(key == currentIndex) opacity = 1
+                SliderItemEl[key].style.visibility = visibility
+                SliderItemEl[key].style.opacity = opacity
+            })
+        }
+    })()  

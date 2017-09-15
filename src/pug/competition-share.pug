@@ -1,0 +1,56 @@
+extends layouts/default 
+
+block title
+    title Peraturan Kompetisi
+
+block content
+    .competition-detail
+
+        //- competition meta
+        include partials/competition/meta-competition
+
+        .col-md-12
+            .container
+                //- content
+                .row.competition-detail--content 
+                    .col-md-10.col-md-push-1
+                        .row
+                            .col-md-12
+                                h2 Share kompetisi 
+                                p Bagikan ke teman-temanmu untuk meramaikan kompetisi ini.
+                                a.share.share-facebook
+                                  .share__icon
+                                    i.fa.fa-facebook
+                                  .share__count
+                                    strong Facebook 
+                                    | 456787
+                                a.share.share-twitter
+                                  .share__icon
+                                    i.fa.fa-twitter
+                                  .share__count
+                                    strong Twitter 
+                                    | 456787
+                                a.share.share-linkedin
+                                  .share__icon
+                                    i.fa.fa-linkedin
+                                  .share__count
+                                    strong Linkedin 
+                                    | 456787
+                                a.share.share-googleplus
+                                  .share__icon
+                                    i.fa.fa-google-plus
+                                  .share__count
+                                    strong Google Plus 
+                                    | 456787
+                                a.share.share-sebangsa
+                                  .share__icon
+                                    i.fa.fa-sebangsa
+                                  .share__count
+                                    strong Sebangsa 
+                                    | 456787
+        
+        //- button next prev
+        include partials/competition/btn-nextprev-competition
+
+        //- related competition
+        include partials/competition/related-competition

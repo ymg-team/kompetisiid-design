@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        block title
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(property="fb:app_id" content="1419514554927551")
+        meta(property="fb:admins" content="100000359263988")
+        link(href="css/style.css" rel="stylesheet")
+        link(href="lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet")
+    body
+        include ../partials/header
+
+        block content
+
+        include ../partials/footer
+        #fb-root
+        #fullalert
+
+        script(src="js/script-min.js")
+        script.
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=109874786260985";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        

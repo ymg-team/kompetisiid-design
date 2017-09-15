@@ -1,0 +1,83 @@
+.row.bg-gray-soft.no-margin.p-50-0
+  .col-md-12
+      .container 
+        //- meta
+        .row 
+          .col-md-12 
+            .competition-author
+                a(href="")
+                  img(src="img/default-avatar.jpg" style="float:left;margin-right:10px")
+                p(style="padding-top:5px") dipasang oleh&nbsp;
+                  a.text-muted(href='#') mudawil
+                  br
+                  small.text-muted dibuat 45 hari lalu  
+                  small.text-muted di&nbsp;
+                    a(href="#")
+                      strong desain
+                    | ,
+                    a(href="#") 
+                      strong desain kaos
+            .m-30
+        .row.competition-detail--meta
+            .col-md-6.align-center.poster
+              img.poster(src='./img/poster/poster-3.jpg')
+              .only-mobile.m-30
+            .col-md-6
+                span.label-lg.label.label-red 
+                  i.fa.fa-check &nbsp;
+                  | Kompetisi Telah Berakhir 
+                span.label-lg.label.label-orange 
+                  i.fa.fa-check &nbsp;
+                  | Kompetisi Sedang Berlangsung 
+                .competition-detail--title
+                  h1 Kompetisi Blog HUT RI 72 oleh KDRI
+                  .m-20
+                  p diselenggarakan oleh  
+                    strong PT Sebangsa Bersama
+                  br
+                  p.text-muted ini adalah tempat untuk meletakan deskripsi pendek untuk kompetisi yang sedang dipasang. ini adalah tempat untuk meletakan deskripsi pendek untuk kompetisi yang sedang dipasang. ini adalah tempat untuk meletakan deskripsi pendek untuk kompetisi yang sedang dipasang
+                .m-30
+                a.btn.btn-green.btn-join.btn-lg(href='#' style="margin-right:10px") 
+                  strong Ikuti Kompetisi
+                a.btn.btn-white(href='#' style="margin-right:10px")
+                  i.fa.fa-save
+                a.btn.btn-white(href='javascript:;' onclick="modal('open', 'save-to-calendar')" style="margin-right:10px")
+                  i.fa.fa-calendar
+                .dropdown
+                  a.fa.fa-ellipsis-v.btn.btn-gray.dropdown-button(data-target="action-competition")
+                  .dropdown-items#action-competition
+                      ul
+                          li
+                              a(href="#") Laporkan Kompetisi
+                          li
+                              a(href="#") Klaim kompetisi
+
+.row.no-margin.container-competition-tab#container-competition-tab
+  .col-md-12
+    .container 
+      .row 
+        .col-md-10.col-md-push-1
+          include ../tabs/competition-detail
+
+.col-md-12
+  .container
+    .row
+      .col-md-10.col-md-push-1
+        .alert.alert-warning 
+          strong Perhatian&nbsp;
+          | Di kompetisi ini, 
+          strong Kompetisi Indonesia 
+          | hanya berlaku sebagai media publikasi. Jika ada pertanyaan lebih lanjut mengenai kompetisi ini silahkan sampaikan langsung ke kontak yang tersedia tab kontak.
+
+//- modal save to calendar
+.modal#save-to-calendar
+  .container
+      h2.modal-title Simpan ke kalender
+      a.btn.btn-white.btn-close-modal.btn-sm.fa.fa-close
+      hr  
+      a 
+        img(src="img/google-calendar-icon.fullwidth.png" style="width:inherit") 
+      a 
+        img(src="img/microsoft-calendar-icon.fullwidth.png" style="width:inherit") 
+            
+      

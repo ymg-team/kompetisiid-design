@@ -1,0 +1,33 @@
+.tab-competition(style="overflow-x:auto")
+    ul.horizontal-menu
+        li.active
+            a(href="/competition-regulation.html") Peraturan
+        li 
+            a(href="/competition-prizes.html") Hadiah
+        li 
+            a(href="/competition-announcements.html") Pengumuman
+        li 
+            a(href="/competition-discussions.html") Diskusi
+        li 
+            a(href="/competition-share.html") Share
+    div(style="float:right;display:inline-flex;margin-top:1.3em")
+        a#btn-join.btn.btn-green.btn-join.btn-lg(href="#") Ikuti kompetisi
+
+//- fixed on scroll
+script.
+    (function(){
+        window.onscroll= function(){
+            const afterScroll = document.getElementsByClassName('bg-gray-soft')[0].offsetHeight + 50
+            const tabEl = document.getElementById('container-competition-tab')
+            const joinEl = document.getElementById('btn-join')
+            if(document.body.scrollTop > afterScroll)
+            {
+                addClass(tabEl, 'fixed')
+                joinEl.style.opacity = 1
+            }else 
+            {
+                removeClass(tabEl, 'fixed')
+                joinEl.style.opacity = 0
+            }
+        }
+    })()

@@ -1,0 +1,29 @@
+extends layouts/default 
+
+block title
+    title Diskusi Kompetisi
+
+block content
+    .competition-detail
+
+        //- competition meta
+        include partials/competition/meta-competition
+
+        .col-md-12
+            .container
+                //- content
+                .row.competition-detail--content 
+                    .col-md-10.col-md-push-1
+                        .row
+                            .col-md-12
+                                h2 Diskusi kompetisi 
+                                p Ingin tahu info lebih lanjut mengenai kompetisi ini, mari sampaikan melalui menu diskusi ini, akan dijawab oleh peserta kompetisi lain atau dijawab langsung oleh penyelenggara.
+                                .discussions 
+                                    .fb-comments(data-width="100%" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5")
+        //- button next prev
+        include partials/competition/btn-nextprev-competition
+
+        //- related competition
+        include partials/competition/related-competition
+
+        script. 

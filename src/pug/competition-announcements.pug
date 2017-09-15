@@ -1,0 +1,39 @@
+extends layouts/default 
+
+block title
+    title Diskusi Kompetisi
+
+block content
+    .competition-detail
+
+        //- competition meta
+        include partials/competition/meta-competition
+
+        .col-md-12
+            .container
+                //- content
+                .row.competition-detail--content 
+                    .col-md-10.col-md-push-1
+                        .row
+                            .col-md-12
+                                h2 Pengumuman kompetisi 
+                                p Berisi pengumuman jika terjadi perubahan peraturan, detail hadiah, atau hal penting lainnya pada kompetisi ini. 
+                                .announcements
+                                    .announcements-list 
+                                        p 
+                                            hr
+                                            small.text-muted 23 Januari 2017 oleh system
+                                            br
+                                            | Lorem ipsum semi dolor omat amet bla-bla ai won todomoro sistematika blagojeh
+                                    .announcements-list 
+                                        p 
+                                            hr
+                                            small.text-muted 23 Januari 2017 oleh system
+                                            br
+                                            | Lorem ipsum semi dolor omat amet bla-bla ai won todomoro sistematika blagojeh    
+                                
+        //- button next prev
+        include partials/competition/btn-nextprev-competition
+
+        //- related competition
+        include partials/competition/related-competition

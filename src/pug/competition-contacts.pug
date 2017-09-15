@@ -1,0 +1,34 @@
+extends layouts/default 
+
+block title
+    title Diskusi Kompetisi
+
+block content
+    .competition-detail
+
+        //- competition meta
+        include partials/competition/meta-competition
+
+        .col-md-12
+            .container
+                //- content
+                .row.competition-detail--content 
+                    .col-md-10.col-md-push-1
+                        .row
+                            .col-md-12
+                                h2 Kontak penyelenggara 
+                                p.text-muted Ada pertanyaan atau ingin info lebih lanjut langsung dari penyelenggara, silahkan sampaikan melalui  kontak dibawah ini.
+                                hr
+                                p 
+                                    i.fa.fa-facebook 
+                                    | &nbsp;
+                                    a(href="#") https://facebook.com/gogo
+                                p 
+                                    i.fa.fa-twitter
+                                    | &nbsp;
+                                    a(href="#") https://twitter.com/gogo
+        //- button next prev
+        include partials/competition/btn-nextprev-competition
+
+        //- related competition
+        include partials/competition/related-competition

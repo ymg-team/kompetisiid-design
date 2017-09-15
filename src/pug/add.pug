@@ -1,0 +1,27 @@
+extends layouts/default 
+
+block title 
+    title pasang kompetisi - kompetisi indonesia
+
+block content
+    .col-md-12.filter-jelajah 
+        .container
+            .row.no-margin
+                h1 
+                    | Pasang Kompetisi                
+                p.text-muted Apakah kamu adalah penyelenggara kompetisi? jika iya, kamu bisa menggunakan fitur ini untuk mempulikasi kompetisimu di KompetisiIndonesia. Ada 2 cara untuk pasang kompetisi, yaitu "Pasang Cepat" dan "Pasang Komplit" untuk saat ini hanya "Pasang Cepat" yang bisa kamu coba.
+    .col-md-12
+        .add-competition
+            .container 
+                    .col-md-12.m-20
+                    .col-md-10.col-md-push-1.m-20
+                        .row
+                            .col-md-6.align-center 
+                                h2 Pasang Cepat
+                                p.text-muted Kamu cukup upload poster dan link untuk kemudian dicek pihak "KI" dan akan diposting jika data tersebut valid. 
+                                a.btn.btn-white(title='klik untuk pasang cepat') Mulai Pasang Cepat
+                            .col-md-6.align-center
+                                h2 Pasang Komplit
+                                p.text-muted Login dan pasang sendiri kompetisimu melalui dashboard member. Kamu akan lebih mudah memanage kompetisi lainnya, diskusi dan memberikan pengumuman kepada para pengunjung. 
+                                a.btn.btn-white(title='klik untuk pasang cepat') Mulai Pasang Komplit
+                    .col-md-12.m-20

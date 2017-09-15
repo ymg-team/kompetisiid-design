@@ -1,0 +1,41 @@
+extends layouts/default 
+
+block title 
+    title pasang cepat - kompetisi indonesia
+
+block content
+    .col-md-12.filter-jelajah 
+        .container
+            .row.no-margin
+                h1 
+                    | Pasang Kompetisi                
+                p.text-muted Apakah kamu adalah penyelenggara kompetisi? jika iya, kamu bisa menggunakan fitur ini untuk mempulikasi kompetisimu di KompetisiIndonesia. Ada 2 cara untuk pasang kompetisi, yaitu "Pasang Cepat" dan "Pasang Komplit" untuk saat ini hanya "Pasang Cepat" yang bisa kamu coba.
+    .m-20
+    .col-md-12 
+        .container 
+            .col-md-6.col-md-push-3.p-50-0
+                h2 Pasang Cepat 
+                p.text-muted Silahkan isi formulir dibawah ini secara komplit. Kami akan memberitahukan melalui email untuk memberikan jawaban apakah kompetisi ini telah terpasang atau ditolak.
+                    br
+                    br
+                    a(href="add.html") kembali ke pasang
+                hr
+                form.form-ki(action="")
+                    .form-child.error
+                        label(for='input-title') Judul kompetisi
+                        input(type='text' id='input-title')
+                        small 20/300 karakter
+                    .form-child
+                        label(for='input-link') link sumber
+                        input(type='link' id='input-link')
+                        small 20/300 karakter
+                    .form-child
+                        label(for='input-poster') Poster
+                        input(type='file' id='input-poster')
+                        small maks 2MB
+                    .form-child 
+                        input(type='checkbox')
+                        span.text-muted &nbsp; saya menyetujui syarat dan ketentuan yang berlaku
+                    .form-child
+                        button.btn.btn-white(type='submit') Submit
+    

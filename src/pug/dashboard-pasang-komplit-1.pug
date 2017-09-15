@@ -1,0 +1,81 @@
+extends layouts/dashboard 
+
+block title 
+    title pasang komplit
+
+block content
+    .col-lg-push-1.col-md-6.col-sm-12
+        h1 Pasang Kompetisi
+        p.text-muted Pasang kompetisimu disini, isi dengan selengkap mungkin untuk mencegah kebingungan para peserta.
+
+        hr
+
+        .p-b-50
+
+            h3 Deskripsi Kompetisi (1/3)
+            form.form-ki
+                .dashboard-box
+                    .form-child
+                        label(for='input-mainkategori') Kategori utama
+                        select#input-mainkategori.btn.btn-white(style="width:100%")
+                            option -- pilih salah satu 
+                            option menulis
+                            option blog
+                    .form-child
+                        label(for='input-subkategori') Sub kategori
+                        select#input-subkategori.btn.btn-white(style="width:100%")
+                            option -- pilih salah satu 
+                            option menulis
+                            option blog
+
+                include partials/loader
+
+                .dashboard-box
+                    .form-child.error
+                        label(for='input-judul') Judul kompetisi
+                        input#input-judul(type='text')
+                        small 20/300 karakter
+                    .form-child
+                        label(for='input-title') Deskripsi singkat kompetisi
+                        textarea#input-title(rows='3')
+                        small maks 500 karakter
+                    .form-child
+                        label(for='input-organizer') Penyelenggara
+                        input#input-organizer(type='text')
+
+                    hr
+
+                    .form-child
+                        label(for='input-poster') Poster Kompetisi
+                        input#input-poster(type='file')
+                        small max 2 MB
+
+                    hr
+
+                    .form-child
+                        label(for='input-deadline') Deadline Pendaftaran
+                        input#input-deadline(type='text')
+                        small Tanggal ketika pendaftaran ditutup
+                    .form-child
+                        label(for='input-annoucement') Pengumuman Pemenang
+                        input#input-announcement(type='text')
+                        small Tanggal ketika pemenang diumumkan                        
+                    
+                    hr
+
+                    .form-child
+                        label(for='input-title') Peraturan Kompetisi
+                        textarea#input-title(rows='5')
+                        small meliputi syarat ketentuan, mekanisme kompetisi dan hal penting lainnya seputar keikutsertaan di kompetisi ini.
+
+                    hr 
+
+                    .form-child
+                        label(for='input-linksumber') Link sumber
+                        input#input-linksumber(type='text')
+                        small Halaman web kompetisi / link yang berisi informasi tentang kompetisi yang dipasang
+
+                    .form-child
+                        a.col-md-12.btn.btn-green(href='dashboard-pasang-komplit-2.html') 
+                            | Berikutnya (Hadiah Kompetisi)
+                            span.fa.fa-arrow-right(style="float:right")

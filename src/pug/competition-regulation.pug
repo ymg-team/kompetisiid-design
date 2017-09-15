@@ -1,0 +1,67 @@
+extends layouts/default 
+
+block title
+    title Peraturan Kompetisi
+
+block content
+    .competition-detail
+
+        //- competition meta
+        include partials/competition/meta-competition
+
+        .col-md-12
+            .container
+                //- content
+                .row.competition-detail--content 
+                    .col-md-10.col-md-push-1
+                        .row
+                            .col-md-8
+                                h2 Peraturan kompetisi 
+                                article 
+                                    p 
+                                        h3 Tentang kompetisi 
+                                        br
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida diam tincidunt velit fringilla, eget malesuada tellus condimentum. Quisque dapibus dolor eget tortor mattis, vitae luctus magna eleifend. Mauris vitae nisl placerat, faucibus sem nec, blandit felis. Quisque vel urna aliquet, aliquam massa nec, vehicula erat. Cras sodales quis purus quis faucibus. Phasellus interdum enim et dictum volutpat. Proin odio sapien, semper at maximus nec, vestibulum sit amet nunc. Vestibulum rutrum quis lacus quis efficitur. Donec ut tempor lorem, vitae mattis augue. Aenean ullamcorper nunc magna, vel semper urna pulvinar sed. Quisque a dictum nulla. Phasellus pharetra arcu convallis dolor venenatis, quis viverra nulla rhoncus.
+                                    p   Etiam sapien lectus, condimentum nec nunc tempus, auctor malesuada ante. Praesent facilisis interdum tellus, sed porttitor sapien cursus mollis. Integer vel aliquet ligula. Etiam feugiat felis non mi porta, ut porttitor est molestie. Aenean ultrices pretium dignissim. Aenean et sapien dui. In hendrerit ac tellus et feugiat. Ut in lacus imperdiet, varius mauris ac, tincidunt risus. Donec scelerisque placerat lacus, sit amet finibus sapien. Suspendisse nisl nisl, sollicitudin consectetur sem quis, consectetur auctor nunc. Maecenas tempor elit sem, a venenatis eros viverra feugiat. Donec hendrerit ex nec massa placerat maximus. Donec pulvinar viverra egestas. Fusce pellentesque lectus eget risus pharetra, eget eleifend ligula vulputate.
+                                    br
+                                    p 
+                                        strong Antara lain 
+                                        br
+                                        ul
+                                            br
+                                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida diam tincidunt velit fringilla, eget malesuada tellus condimentum.
+                                            br
+                                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida diam tincidunt velit fringilla, eget malesuada tellus condimentum.
+                                            br
+                                            li https://facebook.com/askdjhaskdjhaskjdhlkasjdkjhaksd89aosdas/asdkljhasdkljhaslkajsdlkjasd90887w345rw/sdflkjsdfl;kjsdflkjsdflkjdsfsadf/908sdfsdf
+                                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida diam tincidunt velit fringilla, eget malesuada tellus condimentum.
+                                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida diam tincidunt velit fringilla, eget malesuada tellus condimentum.
+                            .col-md-4
+                                //- sidebar in competition detail
+                                .competition-detail--meta
+                                    progress(value='30' max='100')
+                                    h3.total-prize 
+                                        strong Rp 450 juta
+                                        small.text-muted total hadiah
+                                    h3.total-view 456K
+                                        small.text-muted kunjungan
+                                    h3.total-view 45 hari lagi
+                                        small.text-muted deadline (3 jan 2017)
+                                    h3.total-view 60 hari lagi
+                                        small.text-muted pengumuman pemenang (15 feb 2017)
+
+                                    hr 
+
+                                    h4.text-muted
+                                        strong Kompetisi Ini Bersifat
+                                        br 
+
+                                    .label.label-gray Bergaransi
+                                    .label.label-gray Media Partner
+                                    .label.label-gray Support by KI
+            
+        //- button next prev
+        include partials/competition/btn-nextprev-competition
+
+        //- related competition
+        include partials/competition/related-competition

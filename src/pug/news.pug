@@ -1,0 +1,30 @@
+extends layouts/default 
+
+block title
+    title Berita kompetisi
+
+block content
+
+    //- filtering
+    include partials/filters/filter-berita
+
+    //- competitions card
+    #news-container.col-md-12
+        .container
+            .row.no-margin
+                p
+                    | menampilkan&nbsp;
+                    strong  34&nbsp;
+                    | dari&nbsp;
+                    strong 456&nbsp;
+                    | kompetisi 
+                    br
+            .row
+                - for(var i = 0; i < 6; i++) {
+                include ./partials/cards/news
+                - }
+            .row.align-center 
+                a.btn.btn-white Tampilkan berikutnya
+            include partials/loader
+            .row.m-10
+            

@@ -1,0 +1,39 @@
+extends layouts/default 
+
+block title 
+    title profile user
+
+block content
+    .profile
+        .col-md-12.no-margin.profile__cover(style="background-image:url('./img/cover-1.jpg')")
+            .row
+                .col-md-12.divider 
+            .row.meta-container
+                .container
+                    .col-sm-1.col-sm-push-1.col-xs-3
+                        .avatar
+                            img(src='./img/avatar-2.jpg')
+                    .col-sm-9.col-sm-push-1.col-xs-9
+                        h3 yussan
+                            | &nbsp;
+                            small terdaftar 3 tahun lalu
+        .col-md-12
+            .container
+                .col-md-10.col-md-push-1
+                    .row
+                        nav.profile-nav 
+                            ul 
+                                li.active 
+                                    a(href='') 
+                                        h3 20
+                                        | kompetisi diikuti
+                                li 
+                                    a(href='')
+                                        h3 4568
+                                        | kompetisi diikunjungi   
+                                li 
+                                    a(href='')
+                                        h3 13
+                                        | kompetisi dimenangkan    
+                            
+                        
