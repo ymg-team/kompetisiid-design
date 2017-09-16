@@ -1,5 +1,5 @@
 # kompetisi.id-design
-web design of kompetisi.id, build using pug and sass
+web design of https://kompetisi.id, build using pug and sass
 
 ## Preview
 Please follow this link to preview https://kompetisiid.netlify.com
