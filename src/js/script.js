@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  // dropdown
+  // global handle click
   window.onclick = (e) => {
       // show hide modal
       if(e.target.matches('.btn.btn-white.btn-close-modal.btn-sm.fa.fa-close'))
