@@ -10,15 +10,13 @@
     img 
         width: 50px
 
-// new loader
-.competition-item 
+// card loader
+.competition-loader, .news-loader
     background: $color-white-main
-    border: 1px solid $color-gray-verysoft
-    box-shadow: 1px 4px 4px $color-gray-verysoft
     margin-bottom: 30px
     background-color: $color-white-main
     .animated-background 
-        animation-duration: 1s
+        animation-duration: 0.7s
         animation-fill-mode: forwards
         animation-iteration-count: infinite
         animation-name: placeHolderShimmer
@@ -27,6 +25,61 @@
         background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%)
         background-size: 800px 104px
         position: relative
+        .background-masker
+            background: $color-white-main
+            position: absolute
+// news loader
+.news-loader
+    .animated-background 
+        height: 25em
+        .background-masker-1
+            top: 13em
+            height: 1.8em
+            width: 100%
+        .background-masker-1-1
+            top: 14.8em
+            left: 0
+            height: 3em
+            width: 2em
+        .background-masker-1-2
+            top: 14.8em
+            right: 0
+            height: 3em
+            width: 2em
+        .background-masker-2
+            top: 17.8em
+            height: 2em
+            width: 100%
+        .background-masker-2-1
+            top: 19.8em
+            left: 0
+            height: 2em
+            width: 2em
+        .background-masker-2-2
+            top: 19.8em
+            right: 0
+            height: 2em
+            width: 12em
+        .background-masker-3
+            top: 21em
+            height: 1em
+            width: 100%
+        .background-masker-3-1
+            top: 22em
+            left: 0
+            height: 3em
+            width: 2em
+        .background-masker-3-2
+            top: 22em
+            right: 0
+            height: 3em
+            width: calc(100% - 5em)
+
+// competition loader
+.competition-loader 
+    border: 1px solid $color-gray-verysoft
+    box-shadow: 1px 4px 4px $color-gray-verysoft
+    .animated-background 
         height: 28em
         .background-masker-1
             top: 13em
@@ -103,9 +156,6 @@
             bottom: 0
             height: 1em
             width: 100%
-.background-masker
-    background: $color-white-main
-    position: absolute
 
 @keyframes placeHolderShimmer
     0%
