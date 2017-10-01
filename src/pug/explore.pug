@@ -27,15 +27,15 @@ block content
                 - }
             .row.align-center 
                 a.btn.btn-white Tampilkan berikutnya
-            include partials/loader
+            
             .row.m-10
-
+            include partials/loaders/competitionloader
+            .row.m-10
 
     .modal#select-main-kat
         .container
             h2.modal-title Pilih Kategori dibawah ini
-            a.btn.btn-white.btn-close-modal.btn-sm
-                i.fa.fa-close
+            a.btn.btn-white.btn-close-modal.btn-sm.fa.fa-close
             hr  
             ul.vertical-menu.list-categories
                 li 
@@ -48,8 +48,7 @@ block content
     .modal#select-sub-kat
         .container
             h2.modal-title Pilih sub kategori dibawah ini
-            a.btn.btn-white.btn-close-modal.btn-sm
-                i.fa.fa-close
+            a.btn.btn-white.btn-close-modal.btn-sm.fa.fa-close
             hr  
             ul.vertical-menu.list-categories
                 li 
