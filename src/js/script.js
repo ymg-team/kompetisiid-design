@@ -123,9 +123,20 @@ window.modal = function(act, target)
 }
 
 // fullalert
-window.fullalert = function(type, text){
+window.fullalert = function(type, text, alwayshow){
+  // auto close alert
+  let timeout
   const fullalertEl = document.getElementById('fullalert');
   if(fullalertEl.firstChild) fullalertEl.removeChild(fullalertEl.firstChild);//clear child node
+  clearTimeout(timeout)
+  
+  if(!alwayshow && type != 'close')
+  {
+    setTimeout(function(){
+      if(fullalertEl.firstChild) fullalertEl.removeChild(fullalertEl.firstChild);//clear child node
+    }, 5000)
+  }
+
   if(type == 'close') return true;
   // extends alert child
   const divEl = document.createElement('div');
