@@ -13,7 +13,7 @@ let tasks
 
 if(process.env.NODE_ENV == 'production')
 {
-    tasks = ['pug-compiler', 'sass-compiler', 'minify]
+    tasks = ['pug-compiler', 'sass-compiler', 'minify']
 }else 
 {
     tasks = ['browser-sync', 'watch']
