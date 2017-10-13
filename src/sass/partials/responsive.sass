@@ -2,8 +2,10 @@
 @import 'responsive/navigations' 
 @import 'responsive/competition' 
 @import 'responsive/careers'
+@import 'responsive/slider'
 
 @media only screen and (max-width: 543px)
+    @include mobile-slider
     @include mobile-nav
     @include mobile-competition-sub-header
     @include small-careers-item

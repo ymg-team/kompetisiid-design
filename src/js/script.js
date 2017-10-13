@@ -134,7 +134,7 @@ window.fullalert = function(type, text, alwayshow){
   {
     setTimeout(function(){
       if(fullalertEl.firstChild) fullalertEl.removeChild(fullalertEl.firstChild);//clear child node
-    }, 5000)
+    }, 3000)
   }
 
   if(type == 'close') return true;
