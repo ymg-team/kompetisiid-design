@@ -7,7 +7,8 @@
     font-weight: bold
 // default competition cards
 .card-competition
-    border: 1px solid $color-gray-soft
+    border: 1px solid $color-gray-verysoft
+    box-shadow: 1px 4px 4px $color-gray-verysoft
     margin-bottom: 30px
     background-color: $color-white-main
     .card-competition--inside
@@ -64,6 +65,21 @@
         width: 100px
         .btn 
             display: flex
+// error card
+.container
+    &.error 
+        background: $color-white-main
+        display: block
+        padding: 10px
+        text-align: center
+        margin: 2em auto
+        line-height: 1.1
+        color: $color-gray-medium
+        h1 
+            font-size: 5em
+            margin: .1em 0
+        p 
+            line-height: 1.3em
             
 
 

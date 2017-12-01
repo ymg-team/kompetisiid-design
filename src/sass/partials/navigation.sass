@@ -20,16 +20,16 @@ nav
             display: none
         .nav-left
             text-align: left
-            width: 40%
         .nav-right
             text-align: right
-            width: 40%
         .logo
             text-align: center
             margin: 0 auto
             width: 20%
             img
                 width: 40px
+        .nav-left, .nav-right
+            width: calc(40% - 5px)
         .nav-left, .logo, .nav-right
             display: inline-block
             padding: 10px 20px
@@ -46,7 +46,7 @@ nav
                     text-transform: capitalize
                     text-decoration: none 
                     &:hover
-                        color: $color-gray-verysoft
+                        color: $color-gray-soft
         .nav-right
             ul.top-menu
                 li 
@@ -72,6 +72,8 @@ ul.vertical-menu, ul.horizontal-menu
 
 ul.horizontal-menu
     display: inline-flex
+    .label
+        margin: 0
 
 .list-categories 
     a

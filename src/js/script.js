@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   {
     fullalertEl.addEventListener('click', (e) => {
       if(fullalertEl.firstChild) fullalertEl.removeChild(fullalertEl.firstChild);//clear child node
-    })
+    });
   }
   //show/hide search box
   const btnSearchEl = document.getElementById('btn-search');
@@ -16,20 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   {
     btnSearchEl.addEventListener('click', (e) => {
       toggleSearch();
-    })
+    });
     document.getElementById('btn-closesearch').addEventListener('click', (e) => {
       toggleSearch();
-    })
+    });
     //togle nav menu
     document.getElementById('btn-show-nav').addEventListener('click', (e) => {
         toggleNavTop();
-    })
+    });
     document.getElementById('btn-hide-nav').addEventListener('click', (e) => {
         toggleNavTop();
-    })
+    });
   }
 
-  // dropdown
+  // global handle click
   window.onclick = (e) => {
       // show hide modal
       if(e.target.matches('.btn.btn-white.btn-close-modal.btn-sm.fa.fa-close'))
@@ -76,33 +76,46 @@ function toggleNavTop()
 }
 
 // check is el has class
-function hasClass(el, className) {
+function hasClass(el, className) 
+{
   if (el.classList)
+  {
     return el.classList.contains(className);
+  }
   else
+  {
     return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+  }
 }
 
 // add class to el
-function addClass(el, className) {
-  if (el.classList)
+window.addClass = function(el, className) 
+{
+  if (el.classList) 
+  {
     el.classList.add(className);
+  }
   else if (!hasClass(el, className)) 
+  {
     el.className += " " + className;
+  }
 }
 
 // remove class from el
-function removeClass(el, className) {
+window.removeClass = function(el, className) {
   if (el.classList)
+  {
     el.classList.remove(className);
-  else if (hasClass(el, className)) {
+  }
+  else if (hasClass(el, className)) 
+  {
     var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
     el.className=el.className.replace(reg, ' ');
   }
 }
 
 // modal
-function modal(act, target)
+window.modal = function(act, target)
 {
   const el = document.getElementById(target);
   if(act=='open') addClass(el, 'open');
@@ -110,9 +123,20 @@ function modal(act, target)
 }
 
 // fullalert
-window.fullalert = (type, text) => {
+window.fullalert = function(type, text, alwayshow){
+  // auto close alert
+  let timeout
   const fullalertEl = document.getElementById('fullalert');
   if(fullalertEl.firstChild) fullalertEl.removeChild(fullalertEl.firstChild);//clear child node
+  clearTimeout(timeout)
+  
+  if(!alwayshow && type != 'close')
+  {
+    setTimeout(function(){
+      if(fullalertEl.firstChild) fullalertEl.removeChild(fullalertEl.firstChild);//clear child node
+    }, 3000)
+  }
+
   if(type == 'close') return true;
   // extends alert child
   const divEl = document.createElement('div');

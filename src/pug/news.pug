@@ -20,11 +20,12 @@ block content
                     | kompetisi 
                     br
             .row
+
                 - for(var i = 0; i < 6; i++) {
-                include ./partials/cards/news
+                include partials/cards/news
                 - }
             .row.align-center 
                 a.btn.btn-white Tampilkan berikutnya
-            include partials/loader
+            include partials/loaders/newsloader
             .row.m-10
             

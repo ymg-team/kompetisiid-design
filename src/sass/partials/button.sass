@@ -3,6 +3,9 @@
 .btn
     &:focus
         text-decoration: none
+    &:hover 
+        text-decoration: none
+    font-weight: bold
     padding: 10px 20px
     border-radius: 2px
     font-size: 15px
@@ -12,12 +15,11 @@
     display: inline-block
     margin: 0.1em
     &.btn-gray 
-        border: 1px solid $color-gray-main
+        border: 1px solid $color-gray-soft
         background-color: $color-gray-verysoft
         color: $color-gray-main
         &:hover
             background-color: $color-gray-verysoft
-            text-decoration: none
     &.btn-borderwhite 
         border: 2px solid $color-white-main
         background-color: transparent
@@ -26,19 +28,17 @@
             background-color: $color-white-main
             color: $color-gray-main
     &.btn-white 
-        border: 1px solid $color-gray-main
+        border: 1px solid $color-gray-soft
         background-color: $color-white-main
         color: $color-gray-main
         &:hover
             background-color: $color-gray-verysoft
-            text-decoration: none
     &.btn-green 
         border: 1px solid $color-green-dark
         background-color: $color-green-main
         color: $color-white-main
         &:hover
             background-color: $color-green-dark
-            text-decoration: none
     &.btn-black
         border: 1px solid $color-black-dark
         background-color: $color-black-dark
@@ -46,7 +46,6 @@
         &:hover
             background-color: $color-black-medium
             color: $color-white-main
-            text-decoration: none
 .btn-sm
     padding: 5px 10px
     font-size: 12px
