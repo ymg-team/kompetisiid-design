@@ -7,85 +7,102 @@ block content
     //- stats
     .col-md-12.home-count
         .container
-            .col-sm-3.home-count-item 
+            .col-sm-3.col-xs-3.home-count-item 
+                .home-count-text-large 24 Januari 2017
+                .home-count-text-small.text-gray Terus berkarya.
+            .col-sm-3.col-xs-3.home-count-item 
                 .home-count-text-large 456
-                .home-count-text-small Kompetisi Aktif
+                .home-count-text-small.text-gray Kompetisi Aktif
+            .col-sm-3.col-xs-3.home-count-item 
+                .home-count-text-large 6
+                .home-count-text-small.text-gray Deadline Bulan ini
+            .col-sm-3.col-xs-3.home-count-item 
+                .home-count-text-large Rp500jt
+                .home-count-text-small.text-gray Nilai Total Hadiah
+    //- end of stats
 
-
-    //- featured competition
-    .col-md-12(style="border-bottom: 1px solid #969696")
+    //- slider
+    .col-md-12.home-slider
         .container
-            .row.subtitle-more
-                h2.menu-title Kompetisi Utama
-                a.btn.btn-white.btn-sm
-                    | Lihat semua
             .row
-                .col-md-5
-                    .main-competition--left
-                        a(href="#")
-                            img(src="./img/poster/poster-1.jpg")
-                .col-md-5
-                    article.main-competition--right
-                        a(href="#")
-                            h3.title poster design competition
-                        small
-                            | oleh &nbsp;
-                            a(href="#") mellisa
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ullamcorper quam. Curabitur dictum euismod pellentesque. Proin egestas malesuada interdum. Fusce accumsan nulla vehicula libero eleifend lacinia. Duis arcu lorem, sagittis non risus sit amet, ultricies sagittis nunc.                    
+                .col-sm-6.home-slider-left 
+                    h2 Kontes Blog 2017 ri Shopfest 
+                    h3 
+                        | Penyelenggara Shopfest
                         br 
-                        .categories 
-                            a.text-muted(href="#") 
-                                strong desain
-                            | ,&nbsp;
-                            a.text-muted(href="#") 
-                                strong desain poster
-                        progress(value="58" max="100")
+                        | Total Hadiah Senilai Rp 45 Juta
+                        br
+                        | Deadline 30 Hari
+                    p(style="margin-bottom:1.5em") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod nibh et consectetur fringilla. Vestibulum ornare enim in erat maximus, nec sodales velit imperdiet. Morbi eu ultricies purus... 
+                    a.btn.btn-bordergray(href="javascript:;") SYARAT KETENTUAN
 
-                        .meta
-                            .text-1
-                                .count Rp567juta
-                                .text-muted total hadiah
-                            .text-2
-                                .count 12 hari
-                                .text-muted deadline
-                            .text-2
-                                .count 45K
-                                .text-muted kunjungan
+                .col-sm-6.home-slider-right 
+                    .home-slider-poster(style="background-image:url('img/poster/poster-1.jpg')")
+                .col-sm-12.home-slider-navigation
+                    .col-sm-6.col-md-3.home-slider-item.active
+                        a(href="#")
+                            | Ini adalah judul kompetisi
+                            br
+                            small 
+                                | Blog - Blog Writing 
+                                br
+                                strong 
+                                    | Rp 34 Juta
+                    .col-sm-6.col-md-3.home-slider-item
+                        a(href="#")
+                            | Ini adalah judul kompetisi
+                            br
+                            small 
+                                | Blog - Blog Writing 
+                                br
+                                strong 
+                                    | Rp 34 Juta
+                    .col-sm-6.col-md-3.home-slider-item
+                        a(href="#")
+                            | Ini adalah judul kompetisi
+                            br
+                            small 
+                                | Blog - Blog Writing 
+                                br
+                                strong 
+                                    | Rp 34 Juta
+                    .col-sm-6.col-md-3.home-slider-item
+                        a(href="#")
+                            | Ini adalah judul kompetisi
+                            br
+                            small 
+                                | Blog - Blog Writing 
+                                br
+                                strong 
+                                    | Rp 34 Jutas
+                        
+                        
 
-                .col-md-2
-                    .home-categories-list
-                        ul 
-                            li.active 
-                                a(href="/jelajah-by-category.html") blog
-                            li 
-                                a(href="/jelajah-by-category.html") karya tulis
-                            li 
-                                a(href="/jelajah-by-category.html") desain
-                            li 
-                                a(href="/jelajah-by-category.html") developer
-                            li 
-                                a(href="/jelajah-by-category.html") fotografi
-                            li 
-                                a(href="/jelajah-by-category.html") menyanyi
-                            li 
-                                a(href="/jelajah-by-category.html") olahraga
-                            li 
-                                a(href="/categories.html") semua kategori
+            .row 
+                .col-sm-12
 
-    //- popular competitions
-    .col-md-12
-        .container
-            .row.subtitle-more
-                h2.menu-title Kompetisi Populer
-                a.btn.btn-white.btn-sm
-                    | Jelajah kompetisi
-            .row
-                - for(var i = 0; i < 4; i++) {
-                include ./partials/cards/competition-small
-                - }
+    //- end of slider
+
+    //- categories
+    .col-md-12(style="border-top:1px solid gray;border-bottom:1px solid gray;padding: 3em 0")
+        .container 
+            .col.md-12 
+                .header-content 
+                    h2 Kategori 
+                    h3 Berikut beberapa kateogri kompetisi yang bisa diikuti disini.
+            .col-md-12 
+                .row
+                    br
+                    a(href="#") Blog (340) &nbsp;
+                    a(href="#") Fotografi (340) &nbsp;
+                    a(href="#") Software Development (340) &nbsp;
+                    br
+                    br
+                    a.btn.btn-bordergray(href="#") LIHAT SEMUA KATEGORI -> 
+    //- end of categories
 
     //- newest competitions 
-    .col-md-12
+    .col-md-12.m-t-b-20
         .container
             .row.subtitle-more
                 h2.menu-title Kompetisi Terbaru
