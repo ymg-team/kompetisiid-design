@@ -24,6 +24,19 @@ nav
                 li
                     a#btn-search(href="javascript:;" title="click untuk melakukan pencarian") 
                         span.fa.fa-search
+                li
+                    .dropdown
+                        a(href="javascript:;" title="lihat pemberitahuan") 
+                            span.dropdown-button.fa.fa-bell-o(data-target="nav-notif") &nbsp;
+                            small.dropdown-button.label.label-gray.label-circle(data-target="nav-notif") 30
+                        .dropdown-items#nav-notif
+                            ul
+                                li
+                                    a(href="#") Profil saya
+                                li
+                                    a(href="#") Setelan
+                                li
+                                    a(href="#") Keluar
                 li.hide-mobile 
                     a(href="login.html") Login
                 

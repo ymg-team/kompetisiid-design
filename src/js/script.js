@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }else 
       {
           const target = e.target.getAttribute('data-target');
+          console.log(target)
           document.getElementById(target).classList.toggle('show');
       }
   }
