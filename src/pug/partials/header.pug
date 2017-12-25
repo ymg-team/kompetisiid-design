@@ -4,7 +4,7 @@ nav
             span.fa.fa-bars
         .nav-left
             a#btn-show-nav.only-mobile(href="javascript:;")
-                i.fa.fa-bars
+                img(src="./img/icon-128x128.png" style="width:40px")
             ul.top-menu#top-menu
                 a#btn-hide-nav.btn-close-nav.only-mobile(style="position: absolute;top: 0.5em;right: 0.5em;")
                     i.fa.fa-close
@@ -16,7 +16,7 @@ nav
                     a(href="news.html") Berita   
                 li.only-mobile    
                     a(href="news.html") Login      
-        .logo
+        .logo.hide-mobile
             a(href="home.html")
                 img(src="./img/icon-128x128.png")
         .nav-right
@@ -29,14 +29,60 @@ nav
                         a(href="javascript:;" title="lihat pemberitahuan") 
                             span.dropdown-button.fa.fa-bell-o(data-target="nav-notif") &nbsp;
                             small.dropdown-button.label.label-gray.label-circle(data-target="nav-notif") 30
-                        .dropdown-items#nav-notif
+                        .dropdown-items.nav-notif#nav-notif
                             ul
                                 li
-                                    a(href="#") Profil saya
+                                    .nav-item
+                                        | Ada kompetisi baru&nbsp; 
+                                        a(href="#") "Kompetisi blog ayo merangkai kata" 
+                                        br 
+                                        small 
+                                            | oleh&nbsp;
+                                            a(href="#") Ahmad
+                                            | &nbsp;
+                                            | 2 hari lalu
                                 li
-                                    a(href="#") Setelan
+                                    .nav-item
+                                        | Ada pengumuman baru di&nbsp; 
+                                        a(href="#") "Kompetisi menulis dalam rangka HUT Ulang Tahun Sleman" 
+                                        br 
+                                        small 
+                                            | oleh&nbsp;
+                                            a(href="#") Ahmad
+                                            | &nbsp;
+                                            | 2 hari lalu
                                 li
-                                    a(href="#") Keluar
+                                    .nav-item
+                                        | Ada pengumuman baru di&nbsp; 
+                                        a(href="#") "Kompetisi menulis dalam rangka HUT Ulang Tahun Sleman" 
+                                        br 
+                                        small 
+                                            | oleh&nbsp;
+                                            a(href="#") Ahmad
+                                            | &nbsp;
+                                            | 2 hari lalu
+                                li
+                                    .nav-item
+                                        | Ada pengumuman baru di&nbsp; 
+                                        a(href="#") "Kompetisi menulis dalam rangka HUT Ulang Tahun Sleman" 
+                                        br 
+                                        small 
+                                            | oleh&nbsp;
+                                            a(href="#") Ahmad
+                                            | &nbsp;
+                                            | 2 hari lalu
+                                li
+                                    .nav-item
+                                        | Ada pengumuman baru di&nbsp; 
+                                        a(href="#") "Kompetisi menulis dalam rangka HUT Ulang Tahun Sleman" 
+                                        br 
+                                        small 
+                                            | oleh&nbsp;
+                                            a(href="#") Ahmad
+                                            | &nbsp;
+                                            | 2 hari lalu
+                                li.align-center(style="width:100%") 
+                                    a.btn.btn-white(href="#") Selengkapnya
                 li.hide-mobile 
                     a(href="login.html") Login
                 
