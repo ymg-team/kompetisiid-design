@@ -60,3 +60,5 @@ typings/
 dist/*.html 
 dist/css
 dist/js
+
+.DS_Store

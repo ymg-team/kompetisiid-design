@@ -1,13 +1,10 @@
-# kompetisi.id-design
+# [DEPRECATED] this project is deprecated because in Kompetisi.id 4.3 using SASS as modules
+
+## kompetisi.id-design
 web design of https://kompetisi.id, build using pug and sass
 
-<<<<<<< HEAD
-## Preview 
-https://kompetisiid.netlify.com/
-=======
 ## Preview
 Please follow this link to preview https://kompetisiid.netlify.com
->>>>>>> master
 
 ## Prerequisites
 - NODE JS https://nodejs.org/en/download/
